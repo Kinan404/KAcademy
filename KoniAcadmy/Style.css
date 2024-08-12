@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.navbar1 {
+    background-color: rgb(246, 255, 0);
+    color: rgb(0, 0, 0);
+}
+.navbar1 .navbar-collapse {
+    flex-grow: unset;
+    margin-right: 36px;
+}
+.navbar1 .navbar-collapse li {
+    padding: 10px;
+    font-size: 1.5rem;
+}
+.navbar1 .navbar-brand{
+    font-size: 40px;
+    font-family: cursive;
+}
+
+/* The start of Landing section  */
+.landing {
+    height: calc(100vh - 86px);
+}
+.landing .container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
+}
+.landing .container img {
+    max-width: 400px;
+}
+.landing .container .text {
+    height: 100%;
+    direction: rtl;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.landing .container .text h1 {
+    margin-bottom: 1.4rem;
+    font-weight: 600;
+    line-height: 65px;
+}
+.landing .container .text p {
+    font-weight: 500;
+    font-style: normal;
+    line-height: 40px;
+}
+
+
+
