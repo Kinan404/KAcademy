@@ -3,16 +3,37 @@
     margin: 0;
 }
 :root {
-    --fcolor: blue;
+    --fcolor: #5700ff;
     --scolor:black;
 }
 
 /* Start Formats codes */
 
-h1,h2,h3,h4,h5,h6, .font, p {
+h1,h2,h3,h4,h5,h6, .font, p,a {
     font-family: "Rubik", sans-serif;
 }
-/* Start Formats codes */
+.h2-box h2 {
+    text-align: center;
+    position:relative;
+}
+.h2-box h2::after {
+    content: "";
+    position: absolute;
+    bottom: -26px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 6px;
+    width: 86px;
+    background-color: var(--fcolor);
+}
+
+/* Start my own classes */
+.Text-right{
+    text-align: right;
+}
+/* End my own classes  */
+
+/* End Formats codes */
 
 
 .navbar1 {
@@ -35,6 +56,7 @@ h1,h2,h3,h4,h5,h6, .font, p {
 /* The start of Landing section  */
 .landing {
     height: calc(100vh - 86px);
+
 }
 .landing .container {
     display: flex;
@@ -47,7 +69,7 @@ h1,h2,h3,h4,h5,h6, .font, p {
     .landing .container {
         flex-direction: column-reverse;
         justify-content: flex-end;
-
+        padding: 20px 0px 50px 0px;
     }
 }
   
@@ -58,7 +80,7 @@ h1,h2,h3,h4,h5,h6, .font, p {
     height: 100%;
     direction: rtl;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     font-family: "Expo Arabic", Sans-serif;
@@ -66,35 +88,71 @@ h1,h2,h3,h4,h5,h6, .font, p {
 }
 .landing .container .text h1 {
     margin-bottom: 1.4rem;
-    font-size: 3rem;
+    font-size: 3.28rem;
     font-weight: 700;
     line-height: 65px;
 }
 .landing .container .text p {
     font-size: 20px;
     font-weight: 400;
+    padding: 20px;
     font-style: normal;
     line-height: 40px;
+    text-align: justify;
+    margin-bottom: 1.4rem;
+
+}
+.landing .container .text a{
+    padding: 10px 46px;
+    border-radius: 51px;
+    font-weight: 500;
+    color: wheat;
+    font-size: 24px;
+    background-color: var(--fcolor);
 }
 @media (max-width: 768px) {
     .landing .container .text {
         justify-content: flex-start;
         line-height: 1;
         text-align: justify;
-        margin-top: 25px;
-
     }
     .landing .container .text h1 {
         text-align: center;
         font-size: 35px;
         width: 100%;
         font-weight: 700;
+        margin: 0px;
     }
     .landing .container .text p {
         font-size: 18px;
     }
 }
+/* The end of landing */
+.subjects {
+    padding-top: 95px;
 
+}
+.subjects .container {
+    display: flex;
+    gap: 17px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.subjects .container .card {
+    max-width: 18rem;
+    text-align: right;
+}
+.subjects .container .card h5 {
+    text-align:center;
+}
+@media screen and (max-width: 768px) {
+    .subjects .container .card {
+        width: calc(50% - 9px);
+    }
+}
+.subjects .container .card {
+    
+}
 
 
 
