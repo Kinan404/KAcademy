@@ -5,6 +5,8 @@
 :root {
     --fcolor: #5700ff;
     --scolor:black;
+    --thcolor: #23cedb;
+    --frcolor: #f8f9ff;
 }
 
 /* Start Formats codes */
@@ -12,18 +14,26 @@
 h1,h2,h3,h4,h5,h6, .font, p,a {
     font-family: "Rubik", sans-serif;
 }
+/* /////////////Title//////////////// */
+.title {
+    padding: 65px 0px;
+}
 .h2-box h2 {
     text-align: center;
     position:relative;
 }
+.h2-box1 {
+    display: flex;
+    justify-content: right;
+}
 .h2-box h2::after {
     content: "";
     position: absolute;
-    bottom: -26px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    height: 6px;
+    bottom: -18px;
+    right: calc(50% - 43px);
+    height: 4px;
     width: 86px;
+    border-radius: 20px;
     background-color: var(--fcolor);
 }
 
@@ -37,8 +47,12 @@ h1,h2,h3,h4,h5,h6, .font, p,a {
 
 
 .navbar1 {
-    background-color: rgb(246, 255, 0);
-    color: rgb(0, 0, 0);
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    color: var(--thcolor);
+    z-index: 100;
+    box-shadow: 0 1px 0 0 rgba(139, 141, 157, .05), 0 0 1px 0 rgba(65, 71, 108, .15);
 }
 .navbar1 .navbar-collapse {
     flex-grow: unset;
@@ -48,6 +62,9 @@ h1,h2,h3,h4,h5,h6, .font, p,a {
     padding: 10px;
     font-size: 1.5rem;
 }
+.navbar1 .navbar-collapse li a {
+    color:  #939597;
+}
 .navbar1 .navbar-brand{
     font-size: 40px;
     font-family: cursive;
@@ -55,8 +72,10 @@ h1,h2,h3,h4,h5,h6, .font, p,a {
 
 /* The start of Landing section  */
 .landing {
-    height: calc(100vh - 86px);
-
+    position:relative;
+    z-index: 50;
+    height: 100vh;
+    background-color: black;
 }
 .landing .container {
     display: flex;
@@ -64,12 +83,17 @@ h1,h2,h3,h4,h5,h6, .font, p,a {
     flex-direction: row;
     align-items: center;
     height: 100%;
+    position: relative;
+    z-index: 100;
 }
 @media screen and (max-width: 1025px) {
+    .landing {
+        height: auto;
+    }
     .landing .container {
         flex-direction: column-reverse;
         justify-content: flex-end;
-        padding: 20px 0px 50px 0px;
+        padding: 120px 0px 0px 0px;
     }
 }
   
@@ -91,6 +115,7 @@ h1,h2,h3,h4,h5,h6, .font, p,a {
     font-size: 3.28rem;
     font-weight: 700;
     line-height: 65px;
+    color: var(--fcolor);
 }
 .landing .container .text p {
     font-size: 20px;
@@ -100,6 +125,7 @@ h1,h2,h3,h4,h5,h6, .font, p,a {
     line-height: 40px;
     text-align: justify;
     margin-bottom: 1.4rem;
+    color: white;
 
 }
 .landing .container .text a{
@@ -127,11 +153,24 @@ h1,h2,h3,h4,h5,h6, .font, p,a {
         font-size: 18px;
     }
 }
-/* The end of landing */
-.subjects {
-    padding-top: 95px;
 
+@media (min-width: 1025px) {
+    .landing .img-star {
+        background-image: url(Imagges/Blue_circle.png);
+        width: 100%;
+        height: 437px;
+        position: absolute;
+        object-fit: cover;
+        top: 0px;
+        background-size: 200px;
+        background-repeat: no-repeat;
+        z-index: 3;
+    }
 }
+
+/* The end of landing */
+
+/* Start of Subjects  */
 .subjects .container {
     display: flex;
     gap: 17px;
@@ -150,9 +189,86 @@ h1,h2,h3,h4,h5,h6, .font, p,a {
         width: calc(50% - 9px);
     }
 }
-.subjects .container .card {
+
+/* End of Subjects  */
+
+/* Start of Subject Page  */
+/* /////////////Title1//////////////// */
+.title1 {
+    padding: 140px 0px 28px;
+    text-align: right;
+}
+.h2-box1 h2 {
+    position:relative;
+    width: fit-content;
+    color: var(--fcolor);    
+}
+@media (min-width: 1200px) {
+    .h2-box1 h2 {
+        font-size: 2.4rem;
+    }
+}
+.h2-box1 {
+    display: flex;
+    justify-content: right;
+}
+.h2-box1 h2::after {
+    content: "";
+    position: absolute;
+    bottom: -18px;
+    right: 0px;
+    height: 4px;
+    width: 86px;
+    border-radius: 20px;
+    background-color: var(--fcolor);
+}
+.Roadmap {
+    direction: rtl;
+}
+.Roadmap .container {
+
+}
+.Roadmap .container ul {
+    list-style-type: none;
+}
+.Roadmap .container ul li {
+    width: fit-content;
+    padding: 10px 0px;
+    border-bottom: 2px solid red;
+}
+.Roadmap .container ul li i {
+
+}
+.Roadmap .container ul li a {
+
+}
+.line {
+    width: 80%;
+    height: 3px;
+    background-color: var(--fcolor);
+    direction: rtl;
+    margin: 100px 0px;
+}
+/* Start Sources section */
+.Sources {
+    direction: rtl;
+}
+.Sources .container {
+
+}
+.Sources .container ol {
+
+}
+.Sources .container ol li {
+
+}
+.Sources .container ol li ش {
     
 }
 
 
 
+
+/* End Sources section  */
+
+/* Start of Subject Page  */
