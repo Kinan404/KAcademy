@@ -14,6 +14,9 @@
 h1,h2,h3,h4,h5,h6, .font, p,a {
     font-family: "Rubik", sans-serif;
 }
+a {
+    text-decoration: none
+}
 /* /////////////Title//////////////// */
 .title {
     padding: 65px 0px;
@@ -202,10 +205,11 @@ h1,h2,h3,h4,h5,h6, .font, p,a {
     position:relative;
     width: fit-content;
     color: var(--fcolor);    
+    font-size: 2.3rem;
 }
 @media (min-width: 1200px) {
     .h2-box1 h2 {
-        font-size: 2.4rem;
+        font-size: 2.7rem;
     }
 }
 .h2-box1 {
@@ -234,13 +238,21 @@ h1,h2,h3,h4,h5,h6, .font, p,a {
 .Roadmap .container ul li {
     width: fit-content;
     padding: 10px 0px;
-    border-bottom: 2px solid red;
+    border-bottom: 1.5px solid var(--thcolor);
 }
-.Roadmap .container ul li i {
+.Roadmap .container ul li:last-child {
+    border-bottom: none;
+}
 
+.fa-angle-double-left:before, .fa-angles-left:before {
+    color: var(--fcolor);
+    content: "\f100";
+    font-size: 0.8rem;
 }
 .Roadmap .container ul li a {
-
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--scolor);
 }
 .line {
     width: 80%;
