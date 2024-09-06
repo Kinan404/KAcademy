@@ -196,6 +196,7 @@ a {
 /* End of Subjects  */
 
 /* Start of Subject Page  */
+
 /* /////////////Title1//////////////// */
 .title1 {
     padding: 140px 0px 28px;
@@ -261,26 +262,97 @@ a {
     direction: rtl;
     margin: 100px 0px;
 }
+/* End of the Roadmap setion */
+
+/* Start of Seperate line */
+.separate-line {
+    height: 3px;
+    width: 80%;
+    background-color: var(--thcolor);
+    margin: 0px auto;
+    margin: 72px auto;
+    border-radius: 20px;
+}
+/* End of Seperate line */
+
 /* Start Sources section */
-.Sources {
+
+.sources {
     direction: rtl;
 }
-.Sources .container {
+.sources .container {
 
 }
-.Sources .container ol {
-
+.sources .container .subtitles {
+    position: relative;
+    position: relative;
+    margin-bottom: 33px;
 }
-.Sources .container ol li {
-
+.sources .container .subtitles h2 {
+    color: var(--fcolor);
+    font-size: 3rem;
 }
-.Sources .container ol li ش {
-    
+.sources .container .subtitles h2::after {
+    content: "";
+    position: absolute;
+    bottom: -18px;
+    right: 0px;
+    height: 4px;
+    width: 62px;
+    border-radius: 20px;
+    background-color: var(--fcolor);
 }
+@media (max-width: 567px) {
+    .sources .container .subtitles h2 {
+        font-size: 2rem;
+    }
+}
+.sources .container ol {
+    padding: 0px;
+    padding-inline-start: 28px;
+    color: var(--fcolor);
+}
+.sources .container ol li {
+    font-size: 2rem;
+}
+.sources .container ol li .source-link {
+    font-size: 2rem;
+    display: block;
+}
+.sources .container ol li .Expliantion {
+    display: inline;
+    font-size: 1.2rem;
+}
+.sources .container ol li .link-button {
+    padding: 5px;
+    background-color: var(--fcolor);
+    border-radius: 0.4rem;
+    color: white;
+    font-size: 1rem;
+}
+@media (max-width: 567px) {
+    .sources .container ol {
+        padding-inline-start:15px;
+    }
+    .sources .container ol li {
+        font-size: 1rem;
+        padding-bottom: 12px;
+    }
+    .sources .container ol li .source-link {
+        font-size: 1.4rem;
+        display: block;
+    }
+    .sources .container ol li .Expliantion {
+        display: inline;
+        font-size: 1rem;
+    }
 
+    .sources .container ol li .link-button {
+        font-size: 0.6rem;
+    }
+}
 
 
 
 /* End Sources section  */
 
-/* Start of Subject Page  */
