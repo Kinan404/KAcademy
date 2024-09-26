@@ -197,6 +197,51 @@ a {
 
 /* Start of Subject Page  */
 
+/* Start Left,Right,Center sections */
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+.content .Left-side {
+    
+    position: relative;
+    left: 0;
+    width: 300px;
+    background: red;
+}
+.content .right-side {
+    
+    position: relative;
+    right: 0;
+    width: 300px;
+    background: red;
+}
+@media screen and (max-width: 1024px) {
+    .content {
+        display: flex;
+        justify-content: space-between;
+        justify-content: center;
+    }
+    .content .Left-side {
+        display: none;
+        position: relative;
+        left: 0;
+        width: 300px;
+        background: red;
+    }
+    .content .right-side {
+        display: none;
+        
+        position: relative;
+        right: 0;
+        width: 300px;
+        background: red;
+    }
+}
+/* End Left,Right,Center sections */
+
+/* End Left side section */
+
 /* /////////////Title1//////////////// */
 .title1 {
     padding: 140px 0px 28px;
@@ -227,6 +272,7 @@ a {
     border-radius: 20px;
     background-color: var(--fcolor);
 }
+/* Start Roadmap section */
 .Roadmap {
     direction: rtl;
 }
@@ -315,13 +361,20 @@ a {
 .sources .container ol li {
     font-size: 2rem;
 }
+.sources .container ol li.source::marker {
+    background-color: red;
+}
 .sources .container ol li .source-link {
     font-size: 2rem;
     display: block;
+    line-height: 1;
 }
 .sources .container ol li .Expliantion {
     display: inline;
     font-size: 1.2rem;
+    line-height: 1;
+    margin-inline-start: -28px;
+
 }
 .sources .container ol li .link-button {
     padding: 5px;
@@ -345,6 +398,7 @@ a {
     .sources .container ol li .Expliantion {
         display: inline;
         font-size: 1rem;
+        margin-right: 0px;
     }
 
     .sources .container ol li .link-button {
