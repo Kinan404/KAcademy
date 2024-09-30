@@ -7,6 +7,7 @@
     --scolor:black;
     --thcolor: #23cedb;
     --frcolor: #f8f9ff;
+    --border-color: #ddd;
 }
 
 /* Start Formats codes */
@@ -195,28 +196,71 @@ a {
 
 /* End of Subjects  */
 
-/* Start of Subject Page  */
+/* ---------------------------Start of Subject Page ---------------------------------- */
 
 /* Start Left,Right,Center sections */
 .content {
     display: flex;
     justify-content: space-between;
+    padding: 140px 0px 28px;
+}
+@media screen and (max-width: 1024px) {
+    .content .container {
+        padding: .9rem 0;
+    }
+    .content .container {
+        padding: 10px;
+        width: 100%;
+    }
+}
+@media (min-width: 576px) {
+    .content.container {
+        max-width: none;
+    }
 }
 .content .Left-side {
     
     position: relative;
     left: 0;
     width: 300px;
-    background: red;
+    border: 1px solid var(--border-color) ;
+}
+.content .Center-side {
+    width: 100%;
+    padding: 0px 20px;
 }
 .content .right-side {
-    
     position: relative;
     right: 0;
+    top: 0;
     width: 300px;
-    background: red;
+    border: 1px solid var(--border-color) ;
+    border-top: none;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 740px) {
+    .content .Left-side {
+        display: none;
+    }
+    .content .right-side {
+        display: none;
+    }
+}
+.content .right-side .Roadmap {
+    position: sticky;
+    top: 88px;
+}
+.content .right-side .Roadmap li {
+    margin-bottom: 7px;
+    padding-bottom: 7px;
+    border-bottom: 1px solid #ddd;
+    font-weight: 700;
+}
+.content .right-side .Roadmap li a {
+    color: var(--fcolor);
+
+}
+
+/* @media screen and (max-width: 1024px) {
     .content {
         display: flex;
         justify-content: space-between;
@@ -227,24 +271,22 @@ a {
         position: relative;
         left: 0;
         width: 300px;
-        background: red;
+        border: 2px rgb(121, 70, 70) soild;
     }
     .content .right-side {
         display: none;
-        
         position: relative;
         right: 0;
         width: 300px;
-        background: red;
+        border: 2px rgb(121, 70, 70) soild;
     }
-}
+} */
 /* End Left,Right,Center sections */
 
 /* End Left side section */
 
 /* /////////////Title1//////////////// */
 .title1 {
-    padding: 140px 0px 28px;
     text-align: right;
 }
 .h2-box1 h2 {
