@@ -8,6 +8,9 @@
     --thcolor: #23cedb;
     --frcolor: #f8f9ff;
     --border-color: #ddd;
+    --title-line: 60px;
+    --title-font:2rem;
+    --subtitle-font:1.35rem;
 }
 
 /* Start Formats codes */
@@ -195,44 +198,244 @@ a {
 }
 
 /* End of Subjects  */
-
+/* ----------------------------------------------------------------------------------- */
 /* ---------------------------Start of Subject Page ---------------------------------- */
+/* ----------------------------------------------------------------------------------- */
+
 
 /* Start Left,Right,Center sections */
 .content {
     display: flex;
     justify-content: space-between;
     padding: 140px 0px 28px;
+    
 }
 @media screen and (max-width: 1024px) {
     .content .container {
         padding: .9rem 0;
     }
-    .content .container {
-        padding: 10px;
-        width: 100%;
-    }
+
 }
-@media (min-width: 576px) {
+@media (max-width: 576px) {
     .content.container {
         max-width: none;
     }
 }
+@media (min-width:  730px) and (max-width: 1023px) {
+    .container, .container-md, .container-sm {
+        max-width: 720px;
+        margin-right: 20px;
+        width: 100%;
+    }
+}
 .content .Left-side {
-    
     position: relative;
     left: 0;
     width: 300px;
     border: 1px solid var(--border-color) ;
+    border-top: none;
+
+}
+@media (max-width: 1024px) {
+    .content .Left-side {
+        display: none;
+    }
 }
 .content .Center-side {
     width: 100%;
-    padding: 0px 20px;
 }
+/* /////////////Title1//////////////// */
+.title1 {
+    text-align: right;
+}
+.h2-box1 h2 {
+    position:relative;
+    width: fit-content;
+    color: var(--fcolor);    
+    font-size: 2.3rem;
+}
+@media (min-width: 1200px) {
+    .h2-box1 h2 {
+        font-size: 2.7rem;
+    }
+}
+.h2-box1 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 36px;
+}
+.h2-box1 h2::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: -44px;
+    height: 4px;
+    width: var(--title-line);
+    border-radius: 20px;
+    background-color: var(--fcolor);
+    margin: auto;
+}
+
+.content .content-title {
+    background-color: #F1EFEF;
+    padding: 9px 13px;
+    box-sizing: border-box;
+    border-bottom: 2px solid var(--thcolor);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    direction: rtl;
+}
+.content .content-title h2 {
+    color: #000;
+    font-size: 1.125em;
+    font-weight: 700;
+    line-height: 30px;
+    margin: 0;
+}
+/* End Left,Right,Center sections */
+
+/* End Left side section */
+
+
+/* Start Roadmap section */
+.Center-side .Roadmap {
+    direction: rtl;
+}
+.Center-side .Roadmap ol {
+    padding-right: 25px;
+    border-bottom: 2px solid #E0E0E0;
+}
+.Center-side .Roadmap ol li {
+    width: fit-content;
+    padding: 10px 0px;
+}
+.Center-side .Roadmap ol li:last-child {
+    border-bottom: none;
+}
+
+.fa-angle-double-left:before, .fa-angles-left:before {
+    color: var(--fcolor);
+    content: "\f100";
+    font-size: 0.8rem;
+}
+.Center-side .Roadmap ol li a {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--scolor);
+    padding: 10px;
+}
+.line {
+    width: 80%;
+    height: 3px;
+    background-color: var(--fcolor);
+    direction: rtl;
+    margin: 100px 0px;
+}
+/* End of the Roadmap setion */
+
+/* Start of Seperate line */
+.separate-line {
+    height: 3px;
+    width: 80%;
+    background-color: var(--thcolor);
+    margin: 0px auto;
+    margin: 72px auto;
+    border-radius: 20px;
+}
+/* End of Seperate line */
+
+/* Start Sources section */
+
+.sources {
+    direction: rtl;
+}
+.sources .container {
+
+}
+.sources .subtitles {
+    position: relative;
+    position: relative;
+    margin-bottom: 33px;
+}
+.sources .subtitles h2 {
+    color: var(--fcolor);
+    font-size: 3rem;
+}
+.sources .subtitles h2::after {
+    content: "";
+    position: absolute;
+    bottom: -18px;
+    right: 0px;
+    height: 4px;
+    width: 62px;
+    border-radius: 20px;
+    background-color: var(--fcolor);
+}
+@media (max-width: 567px) {
+    .sources .container .subtitles h2 {
+        font-size: 2rem;
+    }
+}
+.sources .container ol {
+    padding: 0px;
+    padding-inline-start: 28px;
+    color: var(--fcolor);
+}
+.sources ol li {
+    font-size: 2rem;
+}
+.sources ol li.source::marker {
+    background-color: red;
+}
+.sources ol li .source-link {
+    font-size: 2rem;
+    display: block;
+    line-height: 1;
+}
+.sources ol li .Expliantion {
+    display: inline;
+    font-size: 1.2rem;
+    line-height: 1;
+    margin-inline-start: -28px;
+
+}
+.sources ol li .link-button {
+    padding: 5px;
+    background-color: var(--fcolor);
+    border-radius: 0.4rem;
+    color: white;
+    font-size: 1rem;
+}
+@media (max-width: 567px) {
+    .sources ol {
+        padding-inline-start:15px;
+    }
+    .sources ol li {
+        font-size: 1rem;
+        padding-bottom: 12px;
+    }
+    .sources ol li .source-link {
+        font-size: 1.4rem;
+        display: block;
+    }
+    .sources ol li .Expliantion {
+        display: inline;
+        font-size: 1rem;
+        margin-right: 0px;
+    }
+
+    .sources ol li .link-button {
+        font-size: 0.6rem;
+    }
+}
+/* End Sources section  */
+
 .content .right-side {
     position: relative;
     right: 0;
-    top: 0;
     width: 300px;
     border: 1px solid var(--border-color) ;
     border-top: none;
@@ -281,174 +484,3 @@ a {
         border: 2px rgb(121, 70, 70) soild;
     }
 } */
-/* End Left,Right,Center sections */
-
-/* End Left side section */
-
-/* /////////////Title1//////////////// */
-.title1 {
-    text-align: right;
-}
-.h2-box1 h2 {
-    position:relative;
-    width: fit-content;
-    color: var(--fcolor);    
-    font-size: 2.3rem;
-}
-@media (min-width: 1200px) {
-    .h2-box1 h2 {
-        font-size: 2.7rem;
-    }
-}
-.h2-box1 {
-    display: flex;
-    justify-content: right;
-}
-.h2-box1 h2::after {
-    content: "";
-    position: absolute;
-    bottom: -18px;
-    right: 0px;
-    height: 4px;
-    width: 86px;
-    border-radius: 20px;
-    background-color: var(--fcolor);
-}
-/* Start Roadmap section */
-.Roadmap {
-    direction: rtl;
-}
-.Roadmap .container {
-
-}
-.Roadmap .container ul {
-    list-style-type: none;
-}
-.Roadmap .container ul li {
-    width: fit-content;
-    padding: 10px 0px;
-    border-bottom: 1.5px solid var(--thcolor);
-}
-.Roadmap .container ul li:last-child {
-    border-bottom: none;
-}
-
-.fa-angle-double-left:before, .fa-angles-left:before {
-    color: var(--fcolor);
-    content: "\f100";
-    font-size: 0.8rem;
-}
-.Roadmap .container ul li a {
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: var(--scolor);
-}
-.line {
-    width: 80%;
-    height: 3px;
-    background-color: var(--fcolor);
-    direction: rtl;
-    margin: 100px 0px;
-}
-/* End of the Roadmap setion */
-
-/* Start of Seperate line */
-.separate-line {
-    height: 3px;
-    width: 80%;
-    background-color: var(--thcolor);
-    margin: 0px auto;
-    margin: 72px auto;
-    border-radius: 20px;
-}
-/* End of Seperate line */
-
-/* Start Sources section */
-
-.sources {
-    direction: rtl;
-}
-.sources .container {
-
-}
-.sources .container .subtitles {
-    position: relative;
-    position: relative;
-    margin-bottom: 33px;
-}
-.sources .container .subtitles h2 {
-    color: var(--fcolor);
-    font-size: 3rem;
-}
-.sources .container .subtitles h2::after {
-    content: "";
-    position: absolute;
-    bottom: -18px;
-    right: 0px;
-    height: 4px;
-    width: 62px;
-    border-radius: 20px;
-    background-color: var(--fcolor);
-}
-@media (max-width: 567px) {
-    .sources .container .subtitles h2 {
-        font-size: 2rem;
-    }
-}
-.sources .container ol {
-    padding: 0px;
-    padding-inline-start: 28px;
-    color: var(--fcolor);
-}
-.sources .container ol li {
-    font-size: 2rem;
-}
-.sources .container ol li.source::marker {
-    background-color: red;
-}
-.sources .container ol li .source-link {
-    font-size: 2rem;
-    display: block;
-    line-height: 1;
-}
-.sources .container ol li .Expliantion {
-    display: inline;
-    font-size: 1.2rem;
-    line-height: 1;
-    margin-inline-start: -28px;
-
-}
-.sources .container ol li .link-button {
-    padding: 5px;
-    background-color: var(--fcolor);
-    border-radius: 0.4rem;
-    color: white;
-    font-size: 1rem;
-}
-@media (max-width: 567px) {
-    .sources .container ol {
-        padding-inline-start:15px;
-    }
-    .sources .container ol li {
-        font-size: 1rem;
-        padding-bottom: 12px;
-    }
-    .sources .container ol li .source-link {
-        font-size: 1.4rem;
-        display: block;
-    }
-    .sources .container ol li .Expliantion {
-        display: inline;
-        font-size: 1rem;
-        margin-right: 0px;
-    }
-
-    .sources .container ol li .link-button {
-        font-size: 0.6rem;
-    }
-}
-
-
-
-/* End Sources section  */
-
